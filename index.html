@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>HTML Document</title>
     <style>
         .bgd-codespan {
             color: red;
@@ -39,6 +39,14 @@
                 headings, paragraphs, images, hyperlinks, tables, lists, etc.
         </li>
     </ul>
+
+    <script>
+        var stringToHTML = function (str) {
+            var parser = new DOMParser();
+            var doc = parser.parseFromString(str, 'text/html');
+            return doc.body;
+        };
+    </script>
 </body>
 
 </html>
